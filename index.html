@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Image Hover Preview</title>
+  <style>
+    #image {
+      background-color: #eeeeee;
+      height: 300px;
+      width: 100%;
+      text-align: center;
+      line-height: 300px;
+      font-size: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: black;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .preview {
+      width: 100px;
+      height: auto;
+      margin: 5px;
+      border: 2px solid transparent;
+    }
+    .preview:hover {
+      border: 2px solid #888;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Hover over an image below to display here.</h2>
+<div id="image">Hover over an image below to display here.</div>
+
+<!-- Thứ tự: đỏ (1.jpg), xanh lá (3.jpg), xanh dương (2.png) -->
+<img class="preview" src="1.jpg" alt="This is red" onmouseover="upDate(this)" onmouseout="undo()">
+<img class="preview" src="3.jpg" alt="This is green" onmouseover="upDate(this)" onmouseout="undo()">
+<img class="preview" src="2.png" alt="This is blue" onmouseover="upDate(this)" onmouseout="undo()">
+
+<script src="script.js"></script>
+</body>
+</html>
